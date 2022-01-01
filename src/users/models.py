@@ -15,7 +15,8 @@ class GenerateProfileImagePath(object):
         ext = filename.split('.')[-1]                             #taking the extension of uploaded image file.
         path = f'media/accounts/{instance.user.id}/images/'       #instance here used as a reference for profiles.
         name = f'profile_image.{ext}'                          # extension extracted and stored into another variable with the help of string interpolation.
-        return os.path.join(path, name)                #adding the patha and extracted name here.
+        return os.path.join(path, name)                        #adding the patha and extracted name here.
+
 
 user_profile_image_path = GenerateProfileImagePath()
 
